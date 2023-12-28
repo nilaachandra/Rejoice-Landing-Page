@@ -1,14 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=Assistant&family=Ephesis&family=Kalnia&family=Martel+Sans&family=Poppins&family=Raleway:wght@400;800&family=Saira+Extra+Condensed&family=Space+Grotesk&display=swap');
 @font-face {
     font-family: Rejoice;
-    src: url(./fonts/Rejouice-Headline\ \(1\).ttf);
+    src: url(./fonts/Rejouice-Headline.ttf);
+}
+@font-face {
+    font-family: NBI;
+    src: url(./fonts/NBInternationalProBoo.ttf);
 }
 
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Rejoice';
+    font-family: 'NBI';
 }
 html, body{
     height: 100%;
@@ -26,13 +30,29 @@ html, body{
     object-fit: cover;
     position: absolute;
 }
+.cursor{
+    height: 7.5vw;
+    width: 7.5vw;
+    background-color: #FF5F38;
+    border-radius: 50%;
+    position: fixed;
+    z-index: 9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translate(-50%,-50%);
+}
 .page1-content{
     height: 100%;
     width: 100%;
-    background-color: black;
     position: relative;
-    z-index: 22;
+    z-index: 10;
     color: white;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 3vw;
 }
 nav{
     width: 100%;
@@ -47,4 +67,16 @@ nav h3{
 }
 nav h4{
     font-size: 1.4vw;
+    font-weight: 100;
+}
+.page1-content h1{
+    font-family: Rejoice;
+    font-size: 22vw;
+    font-weight: 500;
+    line-height: 15vw;
+}
+.page1-content h1 span{
+    font-family: Rejoice;
+    font-size: 22vw;
+    font-weight: 500;
 }
