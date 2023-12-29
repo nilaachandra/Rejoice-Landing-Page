@@ -3,6 +3,7 @@ gsap.registerPlugin(ScrollTrigger);
 //locomotive and scrollTrigger
 const locomotiveAnimations = () => {
 // Using Locomotive Scroll from Locomotive https://github.com/locomotivemtl/locomotive-scroll
+gsap.registerPlugin(ScrollTrigger);
 const locoScroll = new LocomotiveScroll({
   el: document.querySelector("#main"),
   smooth: true
@@ -67,4 +68,17 @@ tl.from(".page1-content h1 span",{
     opacity: 0,
     duration:0.5,
     stagger: 0.1,
+})
+
+tl.to("#create", {
+  y:'0%',
+  duration: 0.4,
+  stagger: 0.1,
+  scrollTrigger:{
+    trigger: "#page3",
+    scroller: "#main",
+    start: "top 80%",
+    end: "top 20%",
+    scrub: 2
+  }
 })
