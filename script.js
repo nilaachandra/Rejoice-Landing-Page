@@ -79,6 +79,7 @@ tl.to("#create", {
     scroller: "#main",
     start: "top 80%",
     end: "top 20%",
+    once: true,
     scrub: 2
   }
 })
